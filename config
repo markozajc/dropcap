@@ -1,0 +1,22 @@
+ngx_addon_name=ngx_dropcap_module
+
+DROPCAP_SRCS="                                                              \
+        $ngx_addon_dir/src/ngx_dropcap.c                                    \
+        "
+
+DROPCAP_DEPS=""
+
+if [ -n "$ngx_module_link" ]; then
+    ngx_module_type=CORE
+    ngx_module_name=$ngx_addon_name
+    ngx_module_incs=
+    ngx_module_deps="$DROPCAP_DEPS"
+    ngx_module_srcs="$DROPCAP_SRCS"
+    ngx_module_libs=
+
+    . auto/module
+else
+    CORE_MODULES="$CORE_MODULES $ngx_addon_name"
+    NGX_ADDON_SRCS="$NGX_ADDON_SRCS $DROPCAP_SRCS"
+    NGX_ADDON_DEPS="$NGX_ADDON_DEPS $DROPCAP_DEPS"
+fi

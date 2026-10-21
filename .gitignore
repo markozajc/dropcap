@@ -1,0 +1,17 @@
+# eclipse files
+/Debug/
+/.settings/
+/.cproject
+/.project
+/compile_commands.json
+
+# dpkg-buildpackage
+/debian/.debhelper/
+/debian/debhelper-build-stamp
+/debian/files
+/debian/libnginx-mod-dropcap.postinst.debhelper
+/debian/libnginx-mod-dropcap.postrm.debhelper
+/debian/libnginx-mod-dropcap.prerm.debhelper
+/debian/libnginx-mod-dropcap.substvars
+/debian/libnginx-mod-dropcap/
+/obj-x86_64-linux-gnu/

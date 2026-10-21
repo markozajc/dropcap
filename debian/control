@@ -1,0 +1,17 @@
+Source: libnginx-mod-dropcap
+Section: httpd
+Priority: optional
+Maintainer: Marko Zajc <marko@zajc.tel>
+Build-Depends: debhelper-compat (= 13),
+               dh-sequence-nginx,
+Standards-Version: 4.7.2
+
+Package: libnginx-mod-dropcap
+Architecture: any
+Multi-Arch: foreign
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+Recommends: nginx,
+Description: Nginx module to drop capabilities and supplementary groups
+ from worker processes.
+

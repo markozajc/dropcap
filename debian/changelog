@@ -1,0 +1,5 @@
+libnginx-mod-dropcap (1.0) stable; urgency=medium
+
+  * Initial release
+
+ -- Marko Zajc <marko@zajc.tel>  Wed, 21 Feb 2026 03:34:50 +0100
