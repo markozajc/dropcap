@@ -1,0 +1,8 @@
+#!/bin/bash
+set -euo pipefail;
+version="$(head -n1 'debian/changelog' | grep -Po '\(\K[^)]+')";
+file="dropcap-src-$version.tar.xz";
+rm -f "$file";
+tar -cvf "$file" --transform='s#^#dropcap/#' 'src/' 'tools/' 'config' 'README.md';
+gpg -u 'marko@zajc.tel' --output "$file.sig" --detach-sig "$file";
+sha256sum $file;
